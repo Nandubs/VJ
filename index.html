@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VJ Mills - Premium Coconut Oil Products</title>
+    <title>VJ Natural and Organic Mills - Pure Health Coconut Oil</title>
     <style>
         * {
             margin: 0;
@@ -12,136 +12,136 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 50%, #e8f5e8 100%);
             min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+        /* Coconut leaf background effects */
+        .leaf-bg {
             position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.1;
         }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
+        .leaf {
+            position: absolute;
+            background: linear-gradient(45deg, #228B22, #32CD32, #90EE90);
+            border-radius: 50px;
+            transform-origin: bottom center;
         }
 
-        .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            background: linear-gradient(135deg, #4CAF50, #2E7D32);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .leaf-1 {
+            width: 200px;
+            height: 400px;
+            top: -100px;
+            left: -50px;
+            transform: rotate(-30deg);
+            animation: sway 8s ease-in-out infinite;
         }
 
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
+        .leaf-2 {
+            width: 150px;
+            height: 300px;
+            top: 20%;
+            right: -30px;
+            transform: rotate(45deg);
+            animation: sway 6s ease-in-out infinite reverse;
         }
 
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s ease;
+        .leaf-3 {
+            width: 180px;
+            height: 350px;
+            bottom: -100px;
+            left: 10%;
+            transform: rotate(-60deg);
+            animation: sway 10s ease-in-out infinite;
         }
 
-        .nav-links a:hover {
-            color: #4CAF50;
+        .leaf-4 {
+            width: 120px;
+            height: 250px;
+            bottom: 20%;
+            right: 5%;
+            transform: rotate(20deg);
+            animation: sway 7s ease-in-out infinite reverse;
         }
 
-        /* Hero Section */
-        .hero {
-            margin-top: 80px;
-            padding: 4rem 0;
-            text-align: center;
+        @keyframes sway {
+            0%, 100% { transform: rotate(var(--rotation, 0deg)) translateX(0); }
+            50% { transform: rotate(var(--rotation, 0deg)) translateX(10px); }
+        }
+
+        .leaf-1 { --rotation: -30deg; }
+        .leaf-2 { --rotation: 45deg; }
+        .leaf-3 { --rotation: -60deg; }
+        .leaf-4 { --rotation: 20deg; }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #2E8B57 0%, #228B22 100%);
             color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(46, 139, 87, 0.3);
+            position: relative;
+            z-index: 10;
         }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
+        .header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
-        .hero p {
+        .header p {
             font-size: 1.2rem;
-            margin-bottom: 2rem;
             opacity: 0.9;
+            font-style: italic;
         }
 
-        .cta-button {
-            display: inline-block;
-            padding: 15px 30px;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            border: 2px solid white;
+        /* Main container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            position: relative;
+            z-index: 5;
         }
 
-        .cta-button:hover {
-            background: white;
-            color: #4CAF50;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-
-        /* Products Section */
-        .products-section {
-            background: white;
-            padding: 4rem 0;
-            margin: 2rem 0;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        /* Section styling */
+        .section {
+            margin-bottom: 4rem;
         }
 
         .section-title {
-            text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 3rem;
-            background: linear-gradient(135deg, #4CAF50, #2E7D32);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #228B22;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(34, 139, 34, 0.2);
         }
 
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
+        /* Product card */
         .product-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            padding: 3rem;
+            box-shadow: 0 15px 40px rgba(46, 139, 87, 0.2);
+            border: 3px solid #228B22;
+            margin-bottom: 3rem;
+            backdrop-filter: blur(10px);
             position: relative;
             overflow: hidden;
-            border: 2px solid #E8F5E8;
         }
 
         .product-card::before {
@@ -150,439 +150,627 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
-            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            height: 5px;
+            background: linear-gradient(90deg, #228B22, #32CD32, #228B22);
         }
 
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(76, 175, 80, 0.2);
-            border-color: #4CAF50;
-        }
-
-        .product-image {
-            width: 100%;
-            height: 250px;
-            background: linear-gradient(45deg, #f8fff8, #e8f5e8);
-            border-radius: 10px;
-            margin-bottom: 1.5rem;
+        .product-title {
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-bottom: 1.5rem;
+            gap: 1rem;
+        }
+
+        .product-title h2 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            font-weight: bold;
+        }
+
+        .coconut-badge {
+            background: #228B22;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
             font-size: 1.1rem;
-            color: #4CAF50;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(34, 139, 34, 0.3);
+        }
+
+        .journey-text {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #2E8B57;
+            font-style: italic;
+            margin-bottom: 2rem;
+            font-weight: bold;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+            text-align: justify;
+            margin-bottom: 2rem;
+        }
+
+        .quality-section {
+            background: linear-gradient(135deg, #f8fff8 0%, #e8f5e8 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #228B22;
+            margin: 2rem 0;
+        }
+
+        .quality-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #2E8B57;
+            font-weight: 500;
+        }
+
+        .highlight {
+            color: #228B22;
+            font-weight: bold;
+        }
+
+        /* Pricing section */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .price-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(46, 139, 87, 0.2);
+            border: 3px solid #e8f5e8;
+            transition: transform 0.3s ease, border-color 0.3s ease;
             position: relative;
-            border: 2px solid #E8F5E8;
+            overflow: hidden;
         }
 
-        .product-image::after {
-            content: '🥥';
-            font-size: 4rem;
-            opacity: 0.7;
+        .price-card:hover {
+            transform: translateY(-10px);
+            border-color: #228B22;
         }
 
-        .product-name {
-            font-size: 1.6rem;
+        .price-card.popular {
+            border-color: #228B22;
+            transform: scale(1.05);
+        }
+
+        .price-card.popular::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #228B22;
+            color: white;
+            padding: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .price-card.popular .card-content {
+            margin-top: 1rem;
+        }
+
+        .package-size {
+            font-size: 2rem;
+            color: #228B22;
             font-weight: bold;
             margin-bottom: 1rem;
-            color: #2E7D32;
         }
 
-        .product-description {
-            color: #555;
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-        }
-
-        .product-features {
-            background: #f8fff8;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
-            border-left: 4px solid #4CAF50;
-        }
-
-        .product-features h4 {
-            color: #2E7D32;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .product-features ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .product-features li {
-            color: #555;
-            margin-bottom: 0.3rem;
-            padding-left: 1rem;
-            position: relative;
-        }
-
-        .product-features li::before {
-            content: '✓';
-            color: #4CAF50;
+        .price {
+            font-size: 2.5rem;
+            color: #2E8B57;
             font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-per-unit {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .package-features {
+            list-style: none;
+            text-align: left;
+        }
+
+        .package-features li {
+            padding: 0.5rem 0;
+            color: #555;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .package-features li::before {
+            content: '✓';
             position: absolute;
             left: 0;
-        }
-
-        .product-price {
-            font-size: 1.8rem;
+            color: #228B22;
             font-weight: bold;
-            color: #4CAF50;
-            text-align: center;
-            background: #f8fff8;
-            padding: 1rem;
-            border-radius: 8px;
-            border: 2px solid #E8F5E8;
         }
 
-        /* About Section */
-        .about-section {
+        /* Production process flowchart */
+        .flowchart {
             background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 4rem 0;
+            border-radius: 25px;
+            padding: 3rem;
+            box-shadow: 0 15px 40px rgba(46, 139, 87, 0.2);
+            border: 3px solid #228B22;
             margin: 2rem 0;
-            border-radius: 20px;
-            text-align: center;
         }
 
-        .about-content {
+        .process-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
             max-width: 800px;
             margin: 0 auto;
         }
 
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        .process-step {
+            display: flex;
+            align-items: center;
             gap: 2rem;
-            margin-top: 3rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f8fff8 0%, #e8f5e8 100%);
+            border-radius: 15px;
+            position: relative;
         }
 
-        .benefit-card {
+        .process-step:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #228B22, #32CD32);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 5px 20px rgba(34, 139, 34, 0.3);
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-title {
+            font-size: 1.4rem;
+            color: #228B22;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-description {
+            color: #555;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .process-arrow {
+            text-align: center;
+            color: #228B22;
+            font-size: 2rem;
+            margin: -1rem 0;
+        }
+
+        /* Features section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(46, 139, 87, 0.15);
+            border: 2px solid #e8f5e8;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(46, 139, 87, 0.25);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #228B22, #32CD32);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 5px 20px rgba(34, 139, 34, 0.3);
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            color: #228B22;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Benefits section */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .benefit-item {
             background: white;
             padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            border: 2px solid #E8F5E8;
-            transition: all 0.3s ease;
+            border-left: 5px solid #228B22;
+            box-shadow: 0 5px 20px rgba(46, 139, 87, 0.1);
         }
 
-        .benefit-card:hover {
-            transform: translateY(-3px);
-            border-color: #4CAF50;
+        .benefit-title {
+            color: #228B22;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
         }
 
-        .benefit-card h3 {
-            color: #2E7D32;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .benefit-card p {
+        .benefit-description {
             color: #555;
             line-height: 1.6;
         }
 
-        /* Contact Section */
-        .contact-section {
-            background: white;
-            padding: 4rem 0;
-            margin: 2rem 0;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        /* Coconut icon */
+        .coconut-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #228B22, #32CD32);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem auto;
+            font-size: 3rem;
+            color: white;
+            box-shadow: 0 10px 30px rgba(34, 139, 34, 0.3);
+            animation: pulse 3s ease-in-out infinite;
         }
 
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .contact-item {
-            padding: 2rem;
-            border-radius: 10px;
-            background: linear-gradient(135deg, #f8fff8, #e8f5e8);
-            border: 2px solid #E8F5E8;
-            transition: all 0.3s ease;
-        }
-
-        .contact-item:hover {
-            border-color: #4CAF50;
-            transform: translateY(-2px);
-        }
-
-        .contact-item h3 {
-            color: #2E7D32;
-            margin-bottom: 1rem;
-        }
-
-        .contact-item p {
-            color: #555;
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
 
         /* Footer */
-        footer {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
+        .footer {
+            background: linear-gradient(135deg, #1a5c1a 0%, #2E8B57 100%);
             color: white;
+            padding: 3rem 0;
             text-align: center;
-            padding: 2rem 0;
-            margin-top: 2rem;
+            position: relative;
+            z-index: 10;
         }
 
-        /* Responsive */
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* Responsive design */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
+            .header h1 {
+                font-size: 2.2rem;
             }
             
-            .hero h1 {
-                font-size: 2.5rem;
+            .product-card, .flowchart {
+                padding: 2rem;
+                margin: 1rem;
             }
             
-            .products-grid {
+            .product-title {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .product-title h2 {
+                font-size: 2rem;
+            }
+            
+            .features, .pricing-grid, .benefits-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .container {
+                padding: 2rem 1rem;
             }
 
-            .products-grid {
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            .process-step {
+                flex-direction: column !important;
+                text-align: center;
+            }
+
+            .price-card.popular {
+                transform: none;
+            }
+
+            .section-title {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">VJ Mills</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Coconut leaf background effects -->
+    <div class="leaf-bg">
+        <div class="leaf leaf-1"></div>
+        <div class="leaf leaf-2"></div>
+        <div class="leaf leaf-3"></div>
+        <div class="leaf leaf-4"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>VJ Natural and Organic Mills</h1>
+        <p>Premium Quality • Traditional Methods • Pure Excellence</p>
     </header>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>VJ Mills</h1>
-            <p>Premium Quality Coconut Oil - Pure, Natural & Healthy</p>
-            <a href="#products" class="cta-button">View Our Products</a>
-        </div>
-    </section>
-
+    <!-- Main Content -->
     <div class="container">
-        <section id="products" class="products-section">
-            <h2 class="section-title">Our Coconut Oil Products</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <h3 class="product-name">Virgin Coconut Oil</h3>
-                    <p class="product-description">Cold-pressed virgin coconut oil extracted from fresh coconut meat. Retains natural coconut aroma and maximum nutrients.</p>
-                    <div class="product-features">
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>100% Pure & Natural</li>
-                            <li>Cold-pressed extraction</li>
-                            <li>Rich in MCT (Medium Chain Triglycerides)</li>
-                            <li>No chemical processing</li>
-                            <li>Natural coconut fragrance</li>
-                        </ul>
-                    </div>
-                    <div class="product-price">₹450 / 500ml</div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <h3 class="product-name">Extra Virgin Coconut Oil</h3>
-                    <p class="product-description">Premium quality extra virgin coconut oil with superior purity and taste. Perfect for cooking and health applications.</p>
-                    <div class="product-features">
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>Extra virgin quality</li>
-                            <li>Superior taste and aroma</li>
-                            <li>High smoke point</li>
-                            <li>Rich in Vitamin E</li>
-                            <li>Ideal for cooking & beauty</li>
-                        </ul>
-                    </div>
-                    <div class="product-price">₹550 / 500ml</div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <h3 class="product-name">Organic Coconut Oil</h3>
-                    <p class="product-description">Certified organic coconut oil from organically grown coconuts. Free from pesticides and chemicals.</p>
-                    <div class="product-features">
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>Certified organic</li>
-                            <li>Pesticide-free</li>
-                            <li>Sustainably sourced</li>
-                            <li>Traditional processing methods</li>
-                            <li>Premium quality assurance</li>
-                        </ul>
-                    </div>
-                    <div class="product-price">₹650 / 500ml</div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <h3 class="product-name">Refined Coconut Oil</h3>
-                    <p class="product-description">Refined coconut oil with neutral taste and odor. Perfect for cooking applications where coconut flavor is not desired.</p>
-                    <div class="product-features">
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>Neutral taste & odor</li>
-                            <li>High smoke point</li>
-                            <li>Long shelf life</li>
-                            <li>Versatile cooking oil</li>
-                            <li>Budget-friendly option</li>
-                        </ul>
-                    </div>
-                    <div class="product-price">₹320 / 500ml</div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <h3 class="product-name">Coconut Oil - 1 Liter</h3>
-                    <p class="product-description">Family pack virgin coconut oil in 1-liter bottles. Perfect for regular household cooking and health needs.</p>
-                    <div class="product-features">
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>Economy family pack</li>
-                            <li>Virgin quality</li>
-                            <li>Value for money</li>
-                            <li>Convenient packaging</li>
-                            <li>Fresh & pure</li>
-                        </ul>
-                    </div>
-                    <div class="product-price">₹850 / 1 Liter</div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <h3 class="product-name">Coconut Oil - Bulk Pack</h3>
-                    <p class="product-description">Bulk packaging for commercial use, restaurants, and large families. Premium quality at wholesale prices.</p>
-                    <div class="product-features">
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>Bulk quantity (5 Liters)</li>
-                            <li>Wholesale pricing</li>
-                            <li>Commercial grade quality</li>
-                            <li>Fresh production</li>
-                            <li>Perfect for businesses</li>
-                        </ul>
-                    </div>
-                    <div class="product-price">₹3,800 / 5 Liters</div>
-                </div>
+        <!-- Product Introduction -->
+        <div class="product-card">
+            <div class="product-title">
+                <h2>Pure Health</h2>
+                <div class="coconut-badge">Coconut Oil</div>
             </div>
-        </section>
+            
+            <div class="journey-text">Our Journey Begins in 2025</div>
+            
+            <div class="description">
+                At <span class="highlight">VJ Natural and Organic Mills</span>, we take pride in offering premium-grade coconut oil extracted through traditional <span class="highlight">Chekku machines</span>. This age-old method preserves the natural nutrients and goodness of the coconut, ensuring our oils are not only healthy but also rich in flavour. Each drop of our coconut oil is carefully crafted to deliver the best of nature, providing you with a unique and wholesome experience.
+            </div>
 
-        <section id="about" class="about-section">
-            <div class="about-content">
-                <h2 class="section-title">About VJ Mills</h2>
-                <p style="font-size: 1.1rem; color: #555; margin-bottom: 2rem;">
-                    VJ Mills is a trusted name in premium coconut oil production. We specialize in extracting the finest quality 
-                    coconut oil using traditional and modern techniques. Our commitment to purity, quality, and customer satisfaction 
-                    has made us a preferred choice for health-conscious consumers.
+            <div class="quality-section">
+                <p>
+                    The <span class="highlight">quality and integrity</span> of our coconut oil are unmatched. The true testament to its <span class="highlight">efficacy</span> is revealed the moment you experience it for the first time.
                 </p>
+            </div>
+
+            <div class="coconut-icon">🥥</div>
+        </div>
+
+        <!-- Pricing Section -->
+        <section class="section">
+            <h2 class="section-title">Our Premium Packages</h2>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <div class="card-content">
+                        <div class="package-size">500ml</div>
+                        <div class="price">₹350</div>
+                        <div class="price-per-unit">₹0.70 per ml</div>
+                        <ul class="package-features">
+                            <li>Perfect for trying our premium oil</li>
+                            <li>Glass bottle packaging</li>
+                            <li>Traditional Chekku extraction</li>
+                            <li>No preservatives added</li>
+                            <li>7-day freshness guarantee</li>
+                        </ul>
+                    </div>
+                </div>
                 
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <h3>🌱 100% Natural</h3>
-                        <p>Our coconut oil is extracted from fresh, naturally grown coconuts without any artificial additives or preservatives.</p>
+                <div class="price-card popular">
+                    <div class="card-content">
+                        <div class="package-size">1 Liter</div>
+                        <div class="price">₹650</div>
+                        <div class="price-per-unit">₹0.65 per ml</div>
+                        <ul class="package-features">
+                            <li>Best value for families</li>
+                            <li>Premium glass bottle</li>
+                            <li>Cold-pressed extraction</li>
+                            <li>Unrefined & sulphur-free</li>
+                            <li>15-day freshness guarantee</li>
+                            <li>Free home delivery</li>
+                        </ul>
                     </div>
-                    <div class="benefit-card">
-                        <h3>⚡ Health Benefits</h3>
-                        <p>Rich in medium-chain triglycerides (MCTs), antioxidants, and essential nutrients that support overall health.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <h3>🏭 Quality Processing</h3>
-                        <p>State-of-the-art processing facilities ensure maximum retention of nutrients and natural properties.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <h3>✅ Quality Assurance</h3>
-                        <p>Every batch undergoes rigorous quality testing to ensure purity, freshness, and safety standards.</p>
+                </div>
+                
+                <div class="price-card">
+                    <div class="card-content">
+                        <div class="package-size">2 Liter</div>
+                        <div class="price">₹1200</div>
+                        <div class="price-per-unit">₹0.60 per ml</div>
+                        <ul class="package-features">
+                            <li>Bulk savings for regular users</li>
+                            <li>Food-grade container</li>
+                            <li>Traditional wooden press</li>
+                            <li>Chemical-free processing</li>
+                            <li>30-day freshness guarantee</li>
+                            <li>Free home delivery</li>
+                            <li>Loyalty program benefits</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact-section">
-            <h2 class="section-title">Contact Us</h2>
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <h3>📍 Address</h3>
-                    <p>VJ Mills Industrial Area<br>Coconut Processing Unit<br>Your City, State - PIN Code</p>
+        <!-- Production Process -->
+        <section class="section">
+            <h2 class="section-title">Traditional Chekku Oil Making Process</h2>
+            <div class="flowchart">
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <div class="step-title">Fresh Coconut Selection</div>
+                            <div class="step-description">We carefully select mature, fresh coconuts from trusted local farmers. Only the finest coconuts with optimal oil content are chosen for processing.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="process-arrow">⬇️</div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <div class="step-title">Coconut Drying</div>
+                            <div class="step-description">Coconuts are naturally sun-dried to reduce moisture content and concentrate the oil. This traditional drying method preserves the natural nutrients.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="process-arrow">⬇️</div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <div class="step-title">Coconut Cutting & Grating</div>
+                            <div class="step-description">Dried coconuts are cut and grated into fine pieces using traditional methods to prepare them for the extraction process.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="process-arrow">⬇️</div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <div class="step-title">Traditional Chekku Pressing</div>
+                            <div class="step-description">Grated coconut is processed in traditional wooden Chekku machines. This cold-pressing method extracts oil without heat, preserving all nutrients and natural flavor.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="process-arrow">⬇️</div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <div class="step-title">Natural Filtration</div>
+                            <div class="step-description">The extracted oil is naturally filtered using traditional cloth filters to remove any impurities while maintaining the oil's natural properties.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="process-arrow">⬇️</div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <div class="step-title">Quality Testing & Packaging</div>
+                            <div class="step-description">Every batch undergoes rigorous quality testing before being packaged in food-grade containers to maintain freshness and purity.</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <h3>📞 Phone</h3>
-                    <p>Sales: +91 XXXXX XXXXX<br>Customer Care: +91 XXXXX XXXXX</p>
+            </div>
+        </section>
+
+        <!-- Health Benefits -->
+        <section class="section">
+            <h2 class="section-title">Health Benefits of Our Coconut Oil</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-title">Rich in MCTs</div>
+                    <div class="benefit-description">Medium-chain triglycerides provide quick energy and support metabolism, making it ideal for active lifestyles.</div>
                 </div>
-                <div class="contact-item">
-                    <h3>✉️ Email</h3>
-                    <p>info@vjmills.com<br>orders@vjmills.com</p>
+                
+                <div class="benefit-item">
+                    <div class="benefit-title">Natural Antimicrobial</div>
+                    <div class="benefit-description">Contains lauric acid which has natural antibacterial and antiviral properties, supporting immune system health.</div>
                 </div>
-                <div class="contact-item">
-                    <h3>🕒 Business Hours</h3>
-                    <p>Monday - Saturday<br>9:00 AM - 6:00 PM<br>Sunday: Closed</p>
+                
+                <div class="benefit-item">
+                    <div class="benefit-title">Heart Healthy</div>
+                    <div class="benefit-description">Traditional extraction preserves beneficial compounds that support cardiovascular health and cholesterol balance.</div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-title">Skin & Hair Care</div>
+                    <div class="benefit-description">Natural moisturizing properties make it excellent for skin and hair care, providing deep nourishment and protection.</div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-title">Digestive Support</div>
+                    <div class="benefit-description">Easy to digest and helps in nutrient absorption, making it suitable for all age groups including children.</div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-title">High Smoke Point</div>
+                    <div class="benefit-description">Stable at high temperatures, making it perfect for cooking, frying, and baking without harmful oxidation.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section">
+            <h2 class="section-title">Why Choose Our Coconut Oil</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">🌿</div>
+                    <div class="feature-title">UNREFINED</div>
+                    <div class="feature-description">Pure, natural coconut oil extracted without any chemical processing, maintaining all its natural goodness and nutritional value.</div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <div class="feature-title">NO PRESERVATIVES</div>
+                    <div class="feature-description">Completely free from artificial preservatives, chemicals, and additives. Just pure, natural coconut oil as nature intended.</div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <div class="feature-title">SULPHUR FREE</div>
+                    <div class="feature-description">Our traditional extraction process ensures zero sulphur content, giving you the purest form of coconut oil for your health and wellness.</div>
                 </div>
             </div>
         </section>
     </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 VJ Mills. All rights reserved. | Premium Coconut Oil Products</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>VJ Natural and Organic Mills</h3>
+            <p>Committed to bringing you the finest quality coconut oil through time-honored traditional methods. Experience the difference of pure, natural goodness in every drop.</p>
+            <br>
+            <p><strong>Contact:</strong> info@vjmills.com | Phone: +91-XXXXX-XXXXX</p>
+            <p><strong>Address:</strong> Traditional Oil Mills, Organic Village, Natural County</p>
         </div>
     </footer>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Add scroll effect to header
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-            }
-        });
-
-        // Add floating animation to product cards
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        });
-
-        document.querySelectorAll('.product-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
-        });
-    </script>
 </body>
 </html>
