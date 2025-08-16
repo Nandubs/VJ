@@ -1412,6 +1412,23 @@
             .footer-bottom {
                 font-size: 0.75rem;
             }
+
+            .hero-image {
+                max-width: 300px; /* Reduce the size of the hero image container */
+                height: auto;
+                margin: 0 auto; /* Center the image */
+            }
+
+            .coconut-showcase {
+                max-width: 200px; /* Reduce the size of the coconut showcase */
+                height: 200px;
+                border-radius: 20px; /* Keep the rounded corners proportional */
+                box-shadow: var(--shadow-md); /* Adjust shadow for smaller size */
+            }
+
+            .coconut-showcase::before {
+                font-size: 5rem; /* Reduce the size of the emoji */
+            }
         }
 
         /* Extra Small Devices (max-width: 480px) */
@@ -1480,19 +1497,7 @@
         </div>
     </header>
 
-  <!-- Image Showcase Section -->
-    <section class="image-showcase">
-        <div class="image-container">
-            <div class="image-box">
-                <img src="1.png" alt="Image 1">
-                <p>No preservatives. No additives. Just pure virgin coconut oil for you and your family.</p>
-            </div>
-            <div class="image-box">
-                <img src="6.png" alt="Image 5">
-                <p>From the farms of Kerala, VJ Mills brings you pure, unrefined coconut oil with real goodness.</p>
-            </div>
-        </div>
-    </section>
+
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-container">
@@ -1512,6 +1517,20 @@
             </div>
             <div class="hero-image">
                 <div class="coconut-showcase"></div>
+            </div>
+        </div>
+    </section>
+
+      <!-- Image Showcase Section -->
+    <section class="image-showcase">
+        <div class="image-container">
+            <div class="image-box">
+                <img src="1.png" alt="Image 1">
+                <p>No preservatives. No additives. Just pure virgin coconut oil for you and your family.</p>
+            </div>
+            <div class="image-box">
+                <img src="6.png" alt="Image 5">
+                <p>From the farms of Kerala, VJ Mills brings you pure, unrefined coconut oil with real goodness.</p>
             </div>
         </div>
     </section>
@@ -2536,3 +2555,4 @@
     </script>
 </body>
 </html>
+`
