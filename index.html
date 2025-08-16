@@ -91,19 +91,14 @@
             text-decoration: none;
         }
 
-        .logo-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--gradient-primary);
-            border-radius: 50%;
+        .logo-image {
+            width: 120px; /* Adjust width for rectangle shape */
+            height: 60px; /* Adjust height for rectangle shape */
+            border-radius: 4px; /* Slightly rounded corners for a modern look */
             margin-right: 0.75rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            box-shadow: var(--shadow-md);
-            animation: pulse 2s infinite;
+            object-fit: cover; /* Ensures the image fits well within the rectangle */
+            box-shadow: var(--shadow-md); /* Adds a subtle shadow for better visibility */
+            border: 2px solid var(--primary-color); /* Optional: Add a border for emphasis */
         }
 
         .nav-menu {
@@ -391,7 +386,7 @@
 
         .section-title p {
             font-size: 1.25rem;
-            color: var(--gray-600);
+            color: var (--gray-600);
             max-width: 600px;
             margin: 0 auto;
         }
@@ -973,6 +968,47 @@
             box-shadow: var(--shadow-lg);
         }
 
+        /* Image Showcase Section */
+        .image-showcase {
+            padding: 4rem 2rem;
+            background: #f8fafc;
+            text-align: center;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .image-box {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .image-box p {
+            padding: 1rem;
+            font-size: 1rem;
+            color: #475569;
+        }
+
+        .image-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -1207,7 +1243,7 @@
     <header class="header" id="header">
         <div class="nav-container">
             <a href="#home" class="logo">
-                <div class="logo-icon">🌴</div>
+                <img src="5.png" alt="VJMills Logo" class="logo-image">
                 VJMills
             </a>
             <nav>
@@ -1369,6 +1405,20 @@
                         </a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Showcase Section -->
+    <section class="image-showcase">
+        <div class="image-container">
+            <div class="image-box">
+                <img src="1.png" alt="Image 1">
+                <p>No preservatives. No additives. Just pure virgin coconut oil for you and your family.</p>
+            </div>
+            <div class="image-box">
+                <img src="6.png" alt="Image 5">
+                <p>From the farms of Kerala, VJ Mills brings you pure, unrefined coconut oil with real goodness.</p>
             </div>
         </div>
     </section>
@@ -1905,7 +1955,7 @@
                     color: white;
                     padding: 1rem 2rem;
                     border-radius: 12px;
-                    box-shadow: var(--shadow-xl);
+                    box-shadow: var (--shadow-xl);
                     z-index: 10000;
                     animation: slideInRight 0.5s ease;
                     max-width: 300px;
